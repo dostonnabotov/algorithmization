@@ -1,0 +1,31 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.fa-circle-info {
+    cursor: pointer;
+    position: relative;
+  display: inline-block;
+}
+
+.fa-circle-info > span {
+    font:message-box;
+    visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  top: -5px;
+  left: 110%;
+  z-index: 1;
+}
+
+.fa-circle-info:hover span {
+    visibility: visible;
+}
