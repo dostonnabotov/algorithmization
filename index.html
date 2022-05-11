@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithmization</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <!-- Temperatures -->
+    <div class="temperatures container">
+        <h2>Temperatures</h2>
+        <!-- Select Form for temperatures -->
+        <form class="select-form">
+            <label for="operation">Choose an operation:</label>
+            <select name="operation" id="operation" onchange="select(this)">
+                <option value=""></option>
+                <option value="CtoF">from Celcius to Fahrenheit</option>
+                <option value="FtoC">from Fahrenheit to Celcius</option>
+                <option value="CtoK">from Celcius to Kelvin</option>
+                <option value="KtoC">from Kelvin to Celcius</option>
+                <option value="FtoK">from Fahrenheit to Kelvin</option>
+                <option value="KtoF">from Kelvin to Fahrenheit</option>
+            </select>
+        </form>
+
+        <!-- from Celcius to Fahrenheit -->
+        <fieldset id="fieldset-CtoF">
+            <legend>From <code>Celcius</code> to <code>Fahrenheit</code></legend>
+            <form oninput="fromCelToFah(celToFah)">
+                <label for="celToFah">Temperature in Celcius: </label>
+                <input type="number" id="celToFah" />
+                <i class="fas fa-circle-info">
+                    <span>(9/5 * T<sub>C</sub>) + 32</span>
+                </i>
+                <p>Output:
+                    <output for="celToFah" id="result_CtoF">0</output>
+                    °F
+                </p>
+            </form>
+        </fieldset>
+
+        <!-- from Fahrenheit to Celcius -->
+        <fieldset id="fieldset-FtoC">
+            <legend>From <code>Fahrenheit</code> to <code>Celcius</code></legend>
+            <form oninput="fromFahToCel(fahToCel)">
+                <label for="fahToCel">Temperature in Fahrenheit: </label>
+                <input type="number" id="fahToCel" />
+                <i class="fas fa-circle-info">
+                    <span>5/9 * (T<sub>F</sub> - 32)</span>
+                </i>
+                <p>Output:
+                    <output for="fahToCel" id="result_FtoC">0</output>
+                    °C
+                </p>
+            </form>
+        </fieldset>
+
+        <!-- from Celcius to Kelvin -->
+        <fieldset id="fieldset-CtoK">
+            <legend>From <code>Celcius</code> to <code>Kelvin</code></legend>
+            <form oninput="fromCelToKel(celToKel)">
+                <label for="celToKel">Temperature in Celcius: </label>
+                <input type="number" id="celToKel" />
+                <i class="fas fa-circle-info">
+                    <span>T<sub>C</sub> + 273.15</span>
+                </i>
+                <p>Output:
+                    <output for="celToKel" id="result_CtoK">0</output>
+                    °K
+                </p>
+            </form>
+        </fieldset>
+
+        <!-- from Kelvin to Celcius -->
+        <fieldset id="fieldset-KtoC">
+            <legend>From <code>Kelvin</code> to <code>Celcius</code></legend>
+            <form oninput="fromKelToCel(kelToCel)">
+                <label for="kelToCel">Temperature in Kelvin: </label>
+                <input type="number" id="kelToCel" />
+                <i class="fas fa-circle-info">
+                    <span>T<sub>K</sub> - 273.15</span>
+                </i>
+                <p>Output:
+                    <output for="kelToCel" id="result_KtoC">0</output>
+                    °C
+                </p>
+            </form>
+        </fieldset>
+
+        <!-- from Fahrenheit to Kelvin -->
+        <fieldset id="fieldset-FtoK">
+            <legend>From <code>Fahrenheit</code> to <code>Kelvin</code></legend>
+            <form oninput="fromFahToKel(fahToKel)">
+                <label for="fahToKel">Temperature in Fahrenheit: </label>
+                <input type="number" id="fahToKel" />
+                <i class="fas fa-circle-info">
+                    <span>5/9 * (T<sub>F</sub> - 32) + 273.15</span>
+                </i>
+                <p>Output:
+                    <output for="fahToKel" id="result_FtoK">0</output>
+                    °K
+                </p>
+            </form>
+        </fieldset>
+
+        <!-- from Kelvin to Fahrenheit -->
+        <fieldset id="fieldset-KtoF">
+            <legend>From <code>Kelvin</code> to <code>Fahrenheit</code></legend>
+            <form oninput="fromKelToFah(kelToFah)">
+                <label for="kelToFah">Temperature in Kelvin: </label>
+                <input type="number" id="kelToFah" />
+                <i class="fas fa-circle-info">
+                    <span>9/5 * (T<sub>K</sub> - 273.15) + 32</span>
+                </i>
+                <p>Output:
+                    <output for="kelToFah" id="result_KtoF">0</output>
+                    °F
+                </p>
+            </form>
+        </fieldset>
+    </div>
+</body>
+
+</html>
