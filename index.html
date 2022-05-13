@@ -1,130 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Algorithmization</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js" defer></script>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="temperatures.js" defer></script>
+    <script src="area-and-perimeters.js" defer></script>
+  </head>
 
-<body>
+  <body>
     <!-- Temperatures -->
-    <div class="temperatures container">
-        <h2>Temperatures</h2>
-        <!-- Select Form for temperatures -->
-        <form class="select-form">
-            <label for="operation">Choose an operation:</label>
-            <select name="operation" id="operation" onchange="select(this)">
-                <option value=""></option>
-                <option value="CtoF">from Celcius to Fahrenheit</option>
-                <option value="FtoC">from Fahrenheit to Celcius</option>
-                <option value="CtoK">from Celcius to Kelvin</option>
-                <option value="KtoC">from Kelvin to Celcius</option>
-                <option value="FtoK">from Fahrenheit to Kelvin</option>
-                <option value="KtoF">from Kelvin to Fahrenheit</option>
-            </select>
-        </form>
+    <div class="container">
+      <h2>Temperatures</h2>
 
+      <div class="grid grid--col-2">
         <!-- from Celcius to Fahrenheit -->
-        <fieldset id="fieldset-CtoF">
-            <legend>From <code>Celcius</code> to <code>Fahrenheit</code></legend>
-            <form oninput="fromCelToFah(celToFah)">
-                <label for="celToFah">Temperature in Celcius: </label>
-                <input type="number" id="celToFah" />
-                <i class="fas fa-circle-info">
-                    <span>(9/5 * T<sub>C</sub>) + 32</span>
-                </i>
-                <p>Output:
-                    <output for="celToFah" id="result_CtoF">0</output>
-                    °F
-                </p>
-            </form>
+        <fieldset>
+          <legend>From <code>Celcius</code> to <code>Fahrenheit</code></legend>
+          <form oninput="fromCelToFah(celToFah)">
+            <label for="celToFah">Temperature in Celcius: </label>
+            <input type="number" id="celToFah" />
+            <i class="fas fa-circle-info">
+              <span>(9/5 * T<sub>C</sub>) + 32</span>
+            </i>
+            <p>
+              Output:
+              <output for="celToFah" id="result_CtoF">0</output>
+              °F
+            </p>
+          </form>
         </fieldset>
-
         <!-- from Fahrenheit to Celcius -->
-        <fieldset id="fieldset-FtoC">
-            <legend>From <code>Fahrenheit</code> to <code>Celcius</code></legend>
-            <form oninput="fromFahToCel(fahToCel)">
-                <label for="fahToCel">Temperature in Fahrenheit: </label>
-                <input type="number" id="fahToCel" />
-                <i class="fas fa-circle-info">
-                    <span>5/9 * (T<sub>F</sub> - 32)</span>
-                </i>
-                <p>Output:
-                    <output for="fahToCel" id="result_FtoC">0</output>
-                    °C
-                </p>
-            </form>
+        <fieldset>
+          <legend>From <code>Fahrenheit</code> to <code>Celcius</code></legend>
+          <form oninput="fromFahToCel(fahToCel)">
+            <label for="fahToCel">Temperature in Fahrenheit: </label>
+            <input type="number" id="fahToCel" />
+            <i class="fas fa-circle-info">
+              <span>5/9 * (T<sub>F</sub> - 32)</span>
+            </i>
+            <p>
+              Output:
+              <output for="fahToCel" id="result_FtoC">0</output>
+              °C
+            </p>
+          </form>
         </fieldset>
-
         <!-- from Celcius to Kelvin -->
-        <fieldset id="fieldset-CtoK">
-            <legend>From <code>Celcius</code> to <code>Kelvin</code></legend>
-            <form oninput="fromCelToKel(celToKel)">
-                <label for="celToKel">Temperature in Celcius: </label>
-                <input type="number" id="celToKel" />
-                <i class="fas fa-circle-info">
-                    <span>T<sub>C</sub> + 273.15</span>
-                </i>
-                <p>Output:
-                    <output for="celToKel" id="result_CtoK">0</output>
-                    °K
-                </p>
-            </form>
+        <fieldset>
+          <legend>From <code>Celcius</code> to <code>Kelvin</code></legend>
+          <form oninput="fromCelToKel(celToKel)">
+            <label for="celToKel">Temperature in Celcius: </label>
+            <input type="number" id="celToKel" />
+            <i class="fas fa-circle-info">
+              <span>T<sub>C</sub> + 273.15</span>
+            </i>
+            <p>
+              Output:
+              <output for="celToKel" id="result_CtoK">0</output>
+              °K
+            </p>
+          </form>
         </fieldset>
-
         <!-- from Kelvin to Celcius -->
-        <fieldset id="fieldset-KtoC">
-            <legend>From <code>Kelvin</code> to <code>Celcius</code></legend>
-            <form oninput="fromKelToCel(kelToCel)">
-                <label for="kelToCel">Temperature in Kelvin: </label>
-                <input type="number" id="kelToCel" />
-                <i class="fas fa-circle-info">
-                    <span>T<sub>K</sub> - 273.15</span>
-                </i>
-                <p>Output:
-                    <output for="kelToCel" id="result_KtoC">0</output>
-                    °C
-                </p>
-            </form>
+        <fieldset>
+          <legend>From <code>Kelvin</code> to <code>Celcius</code></legend>
+          <form oninput="fromKelToCel(kelToCel)">
+            <label for="kelToCel">Temperature in Kelvin: </label>
+            <input type="number" id="kelToCel" />
+            <i class="fas fa-circle-info">
+              <span>T<sub>K</sub> - 273.15</span>
+            </i>
+            <p>
+              Output:
+              <output for="kelToCel" id="result_KtoC">0</output>
+              °C
+            </p>
+          </form>
         </fieldset>
-
         <!-- from Fahrenheit to Kelvin -->
-        <fieldset id="fieldset-FtoK">
-            <legend>From <code>Fahrenheit</code> to <code>Kelvin</code></legend>
-            <form oninput="fromFahToKel(fahToKel)">
-                <label for="fahToKel">Temperature in Fahrenheit: </label>
-                <input type="number" id="fahToKel" />
-                <i class="fas fa-circle-info">
-                    <span>5/9 * (T<sub>F</sub> - 32) + 273.15</span>
-                </i>
-                <p>Output:
-                    <output for="fahToKel" id="result_FtoK">0</output>
-                    °K
-                </p>
-            </form>
+        <fieldset>
+          <legend>From <code>Fahrenheit</code> to <code>Kelvin</code></legend>
+          <form oninput="fromFahToKel(fahToKel)">
+            <label for="fahToKel">Temperature in Fahrenheit: </label>
+            <input type="number" id="fahToKel" />
+            <i class="fas fa-circle-info">
+              <span>5/9 * (T<sub>F</sub> - 32) + 273.15</span>
+            </i>
+            <p>
+              Output:
+              <output for="fahToKel" id="result_FtoK">0</output>
+              °K
+            </p>
+          </form>
         </fieldset>
-
         <!-- from Kelvin to Fahrenheit -->
-        <fieldset id="fieldset-KtoF">
-            <legend>From <code>Kelvin</code> to <code>Fahrenheit</code></legend>
-            <form oninput="fromKelToFah(kelToFah)">
-                <label for="kelToFah">Temperature in Kelvin: </label>
-                <input type="number" id="kelToFah" />
-                <i class="fas fa-circle-info">
-                    <span>9/5 * (T<sub>K</sub> - 273.15) + 32</span>
-                </i>
-                <p>Output:
-                    <output for="kelToFah" id="result_KtoF">0</output>
-                    °F
-                </p>
-            </form>
+        <fieldset>
+          <legend>From <code>Kelvin</code> to <code>Fahrenheit</code></legend>
+          <form oninput="fromKelToFah(kelToFah)">
+            <label for="kelToFah">Temperature in Kelvin: </label>
+            <input type="number" id="kelToFah" />
+            <i class="fas fa-circle-info">
+              <span>9/5 * (T<sub>K</sub> - 273.15) + 32</span>
+            </i>
+            <p>
+              Output:
+              <output for="kelToFah" id="result_KtoF">0</output>
+              °F
+            </p>
+          </form>
         </fieldset>
+      </div>
     </div>
-</body>
+    <!-- /Temperatures -->
 
+    <div class="container">
+      <!-- Areas and Perimeters -->
+      <h2>Areas and Perimeters</h2>
+
+      <div class="grid grid--col-2">
+        <!-- Area and Perimeter of Square -->
+        <fieldset>
+          <legend>Area and Perimeter of <code>Square</code></legend>
+          <form oninput="square(square_length)">
+            <label for="square_length">Side Length of Square: </label>
+            <input type="number" id="square_length" />
+            <i class="fas fa-circle-info">
+              <span>A = L * L, P = 4 * L</span>
+            </i>
+            <p>Area: <output for="square__length" id="square_area">0</output></p>
+            <p>Perimeter: <output for="square__length" id="square_perimeter">0</output></p>
+          </form>
+        </fieldset>
+
+        <!-- Area and Perimeter of Circle -->
+        <fieldset>
+          <legend>Area and Perimeter of <code>Circle</code></legend>
+          <form oninput="circle(circle_radius)">
+            <label for="circle_radius">Radius of circle: </label>
+            <input type="number" id="circle_radius" />
+            <i class="fas fa-circle-info">
+              <span>Area = 22/7 * R * R, Perimeter = 2 * 22/7 * R</span>
+            </i>
+            <p>Area: <output for="circle__radius" id="circle_area">0</output></p>
+            <p>Perimeter: <output for="circle__radius" id="circle_perimeter">0</output></p>
+          </form>
+        </fieldset>
+
+        <!-- Area and Perimeter of Rectangle -->
+        <fieldset>
+          <legend>Area and Perimeter of <code>Rectangle</code></legend>
+          <form oninput="rectangle(rectangle_length, rectangle_breadth)">
+            <label for="rectangle_length">Length of Rectangle: </label>
+            <input type="number" id="rectangle_length" />
+            <br><br>
+            <label for="rectangle_breadth">Breadth of Rectangle: </label>
+            <input type="number" id="rectangle_breadth" />
+            <i class="fas fa-circle-info">
+              <span>A = L * B, P = 2 * (L + B)</span>
+            </i>
+            <p>Area: <output for="rectangle_length rectangle_breadth" id="rectangle_area">0</output></p>
+            <p>Perimeter: <output for="rectangle_length rectangle_breadth" id="rectangle_perimeter">0</output></p>
+        </fieldset>
+
+        <!-- Area and Perimeter of Triangle -->
+        <fieldset>
+          <legend>Area and Perimeter of <code>Triangle</code></legend>
+          <form oninput="triangle(triangle_A, triangle_B, triangle_C)">
+            <label for="triangle_A">A side of triangle: </label>
+            <input type="number" id="triangle_A" />
+            <br><br>
+            <label for="triangle_B">B side of triangle: </label>
+            <input type="number" id="triangle_B" />
+            <br><br>
+            <label for="triangle_C">C side of triangle: </label>
+            <input type="number" id="triangle_C" />
+            <i class="fas fa-circle-info">
+              <span>S = sides = (A + B + C) / 2,
+                    A = sqrt(S * (S - A) * (S - B) * (S - C)),
+                    Perimeter = A + B + C</span>
+            </i>
+            <p>Area: <output for="triangle_A triangle_B triangle_C" id="triangle_area">0</output></p>
+            <p>Perimeter: <output for="triangle_A triangle_B triangle_C" id="triangle_perimeter">0</output></p>
+        </fieldset>
+      </div>
+    </div>
+  </body>
 </html>
