@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -9,9 +11,22 @@ body {
   font-size: 1rem;
 }
 
+input,
+form,
+button,
+fieldset,
+legend,
+output {
+  font: inherit;
+}
+
 .container {
   width: min(100% - 2rem, 56.25rem);
   margin-inline: auto;
+}
+
+:where(form, fieldset) > *:where(:not(:first-child)) {
+  margin-top: 0.5rem;
 }
 
 .grid {
@@ -19,9 +34,11 @@ body {
   gap: var(--gap, 1rem);
 }
 
-.grid--col-2 {
-  --gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
+@media (min-width: 50em) {
+  .grid--col-2 {
+    --gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 code {
@@ -31,38 +48,20 @@ code {
 
 fieldset {
   width: min(100%, 30rem);
+  margin-inline: auto;
   padding: 1rem;
 }
 
-/* Info */
-.fa-circle-info {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  margin-left: 0.5rem;
+label {
+  display: block;
 }
 
-.fa-circle-info > span {
-  position: absolute;
-  top: -5px;
-  left: 110%;
-
-  width: 200px;
-  transform: scale(0) rotate(90deg);
-  transform-origin: left;
-
-  font: message-box;
-  text-align: center;
-
-  padding: 5px 0;
-  background-color: #111;
-  color: #fff;
-  border-radius: 6px;
-  transition: transform 150ms ease-in-out, rotate 150ms ease-in-out;
-
-  z-index: 1;
+input {
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
 }
 
-.fa-circle-info:hover span {
-  transform: scale(1) rotate(0);
+output {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
 }

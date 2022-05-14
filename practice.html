@@ -1,0 +1,17 @@
+<!-- Area and Perimeter of Triangle -->
+<fieldset>
+  <legend>Area and Perimeter of <code>Triangle</code></legend>
+  <form oninput="triangle()">
+    <label for="tri_A">A Side of Triangle: </label>
+    <input type="number" id="tri_A" />
+    <br /><br />
+    <label for="tri_B">B Side of Triangle: </label>
+    <input type="number" id="tri_B" />
+    <br /><br />
+    <label for="tri_C">C Side of Triangle: </label>
+    <input type="number" id="tri_C" />
+    <p>Area:<output for="tri_A tri_B tri_C" id="triangle_area">0 </output></p>
+    <p>Perimeter:<output for="tri_A tri_B tri_C" id="triangle_perimeter">0 </output></p>
+    <p>Formula: $$S=(A+B+C)\over2$$ $$Area=sqrt{S*(S-A)*(S-B)*(S-C)}$$ $$Perimeter=A+B+C$$</p>
+  </form>
+</fieldset>
