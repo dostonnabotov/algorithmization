@@ -1,222 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Algorithmization</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="index.js"></script>
-  </head>
 
-  <body>
-    <main class="container">
-      <!-- Temperatures -->
-      <h2>Temperatures</h2>
-      <div class="grid grid--col-2">
-        <!-- from Celcius to Fahrenheit -->
-        <fieldset>
-          <legend>From <code>Celcius</code> to <code>Fahrenheit</code></legend>
-          <label for="celToFah">
-            Temperature in Celcius:
-            <input type="number" id="celToFah" oninput="fromCelToFah(this)" />
-          </label>
-          <p>
-            Output: <output for="celToFah" id="result_CtoF">0</output>
-            \(^\circ F\)
-          </p>
-          <details>
-            <summary>Formula</summary>
-            <p>$$T_F=({9\over 5} * T_C) + 32$$</p>
-          </details>
-        </fieldset>
-        <!-- from Fahrenheit to Celcius -->
-        <fieldset>
-          <legend>From <code>Fahrenheit</code> to <code>Celcius</code></legend>
-          <label for="fahToCel">
-            Temperature in Fahrenheit:
-            <input type="number" id="fahToCel" oninput="fromFahToCel(this)" />
-          </label>
-          <p>
-            Output:
-            <output for="fahToCel" id="result_FtoC">0</output>
-            \(^\circ C\)
-          </p>
-          <details>
-            <summary>Formula</summary>
-            <p>$$T_C={5\over 9} * (T_F - 32)$$</p>
-          </details>
-        </fieldset>
-        <!-- from Celcius to Kelvin -->
-        <fieldset>
-          <legend>From <code>Celcius</code> to <code>Kelvin</code></legend>
-          <label for="celToKel">
-            Temperature in Celcius:
-            <input type="number" id="celToKel" oninput="fromCelToKel(this)" />
-          </label>
-          <p>
-            Output:
-            <output for="celToKel" id="result_CtoK">0</output>
-            \(^\circ K\)
-          </p>
-          <details>
-            <summary>Formula</summary>
-            <p>$$T_K=T_C+273.15$$</p>
-          </details>
-        </fieldset>
-        <!-- from Kelvin to Celcius -->
-        <fieldset>
-          <legend>From <code>Kelvin</code> to <code>Celcius</code></legend>
-          <label for="kelToCel">
-            Temperature in Kelvin:
-            <input type="number" id="kelToCel" oninput="fromKelToCel(this)" />
-          </label>
-          <p>
-            Output:
-            <output for="kelToCel" id="result_KtoC">0</output>
-            \(^\circ C\)
-          </p>
-          <details>
-            <summary>Formula</summary>
-            <p>$$T_C=T_F-273.15$$</p>
-          </details>
-        </fieldset>
-        <!-- from Fahrenheit to Kelvin -->
-        <fieldset>
-          <legend>From <code>Fahrenheit</code> to <code>Kelvin</code></legend>
-          <label for="fahToKel">
-            Temperature in Fahrenheit:
-            <input type="number" id="fahToKel" oninput="fromFahToKel(this)" />
-          </label>
-          <p>
-            Output:
-            <output for="fahToKel" id="result_FtoK">0</output>
-            \(^\circ K\)
-          </p>
-          <details>
-            <summary>Formula</summary>
-            <p>$$T_K={5\over 9} * (T_F - 32)+273.15$$</p>
-          </details>
-        </fieldset>
-        <!-- from Kelvin to Fahrenheit -->
-        <fieldset>
-          <legend>From <code>Kelvin</code> to <code>Fahrenheit</code></legend>
-          <label for="kelToFah">
-            Temperature in Kelvin:
-            <input type="number" id="kelToFah" oninput="fromKelToFah(this)" />
-          </label>
-          <p>
-            Output:
-            <output for="kelToFah" id="result_KtoF">0</output>
-            \(^\circ F\)
-          </p>
-          <details>
-            <summary>Formula</summary>
-            <p>$$T_F={9\over 5} * (T_K - 273.15)+32$$</p>
-          </details>
-        </fieldset>
-      </div>
-      <!-- /Temperatures -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algorithmization</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="index.js"></script>
+</head>
 
-      <!-- Areas and Perimeters -->
-      <h2>Areas and Perimeters</h2>
-      <div class="grid grid--col-2">
-        <!-- Area and Perimeter of Square -->
-        <fieldset>
-          <legend>Area and Perimeter of <code>Square</code></legend>
-          <label for="square_length">
-            Side Length of Square:
-            <input type="number" id="square_length" oninput="square(this)" />
+<body>
+  <main class="container">
+    <!-- Temperatures -->
+    <h2>Temperatures</h2>
+    <div class="grid grid--col-2">
+      <!-- from Celcius to Fahrenheit -->
+      <fieldset>
+        <legend>From <code>Celcius</code> to <code>Fahrenheit</code></legend>
+        <label for="celToFah">
+          Temperature in Celcius:
+          <input type="number" id="celToFah" oninput="fromCelToFah(this)" />
+        </label>
+        <p>
+          Output: <output for="celToFah" id="result_CtoF">0</output>
+          \(^\circ F\)
+        </p>
+        <details>
+          <summary>Formula</summary>
+          <p>$$T_F=({9\over 5} \times T_C) + 32$$</p>
+        </details>
+      </fieldset>
+      <!-- from Fahrenheit to Celcius -->
+      <fieldset>
+        <legend>From <code>Fahrenheit</code> to <code>Celcius</code></legend>
+        <label for="fahToCel">
+          Temperature in Fahrenheit:
+          <input type="number" id="fahToCel" oninput="fromFahToCel(this)" />
+        </label>
+        <p>
+          Output:
+          <output for="fahToCel" id="result_FtoC">0</output>
+          \(^\circ C\)
+        </p>
+        <details>
+          <summary>Formula</summary>
+          <p>$$T_C={5\over 9} \times (T_F - 32)$$</p>
+        </details>
+      </fieldset>
+      <!-- from Celcius to Kelvin -->
+      <fieldset>
+        <legend>From <code>Celcius</code> to <code>Kelvin</code></legend>
+        <label for="celToKel">
+          Temperature in Celcius:
+          <input type="number" id="celToKel" oninput="fromCelToKel(this)" />
+        </label>
+        <p>
+          Output:
+          <output for="celToKel" id="result_CtoK">0</output>
+          \(^\circ K\)
+        </p>
+        <details>
+          <summary>Formula</summary>
+          <p>$$T_K=T_C+273.15$$</p>
+        </details>
+      </fieldset>
+      <!-- from Kelvin to Celcius -->
+      <fieldset>
+        <legend>From <code>Kelvin</code> to <code>Celcius</code></legend>
+        <label for="kelToCel">
+          Temperature in Kelvin:
+          <input type="number" id="kelToCel" oninput="fromKelToCel(this)" />
+        </label>
+        <p>
+          Output:
+          <output for="kelToCel" id="result_KtoC">0</output>
+          \(^\circ C\)
+        </p>
+        <details>
+          <summary>Formula</summary>
+          <p>$$T_C=T_F-273.15$$</p>
+        </details>
+      </fieldset>
+      <!-- from Fahrenheit to Kelvin -->
+      <fieldset>
+        <legend>From <code>Fahrenheit</code> to <code>Kelvin</code></legend>
+        <label for="fahToKel">
+          Temperature in Fahrenheit:
+          <input type="number" id="fahToKel" oninput="fromFahToKel(this)" />
+        </label>
+        <p>
+          Output:
+          <output for="fahToKel" id="result_FtoK">0</output>
+          \(^\circ K\)
+        </p>
+        <details>
+          <summary>Formula</summary>
+          <p>$$T_K={5\over 9} \times (T_F - 32)+273.15$$</p>
+        </details>
+      </fieldset>
+      <!-- from Kelvin to Fahrenheit -->
+      <fieldset>
+        <legend>From <code>Kelvin</code> to <code>Fahrenheit</code></legend>
+        <label for="kelToFah">
+          Temperature in Kelvin:
+          <input type="number" id="kelToFah" oninput="fromKelToFah(this)" />
+        </label>
+        <p>
+          Output:
+          <output for="kelToFah" id="result_KtoF">0</output>
+          \(^\circ F\)
+        </p>
+        <details>
+          <summary>Formula</summary>
+          <p>$$T_F={9\over 5} \times (T_K - 273.15)+32$$</p>
+        </details>
+      </fieldset>
+    </div>
+    <!-- /Temperatures -->
+
+    <!-- Areas and Perimeters -->
+    <h2>Areas and Perimeters</h2>
+    <div class="grid grid--col-2">
+      <!-- Area and Perimeter of Square -->
+      <fieldset>
+        <legend>Area and Perimeter of <code>Square</code></legend>
+        <label for="square_length">
+          Side Length of Square:
+          <input type="number" id="square_length" oninput="square(this)" />
+        </label>
+        <p>Area: <output for="square__length" id="square_area">0</output></p>
+        <p>
+          Perimeter:
+          <output for="square__length" id="square_perimeter">0</output>
+        </p>
+        <details>
+          <summary>Formula</summary>
+          <p>$$Area = L \times L$$ $$Perimeter = 4 \times L$$</p>
+        </details>
+      </fieldset>
+      <!-- Area and Perimeter of Circle -->
+      <fieldset>
+        <legend>Area and Perimeter of <code>Circle</code></legend>
+        <label for="circle_radius">
+          Radius of circle:
+          <input type="number" id="circle_radius" oninput="circle(this)" />
+        </label>
+        <p>Area: <output for="circle__radius" id="circle_area">0</output></p>
+        <p>
+          Perimeter:
+          <output for="circle__radius" id="circle_perimeter">0</output>
+        </p>
+        <details>
+          <summary>Formula</summary>
+          <p>$$Area = {22\over7}\times R\times R $$ $$Perimeter = 2\times {22\over7}\times R$$</p>
+        </details>
+      </fieldset>
+      <!-- Area and Perimeter of Rectangle -->
+      <fieldset>
+        <legend>Area and Perimeter of <code>Rectangle</code></legend>
+        <form oninput="rectangle(rectangle_length, rectangle_breadth)">
+          <label for="rectangle_length">
+            Length of Rectangle:
+            <input type="number" id="rectangle_length" />
           </label>
-          <p>Area: <output for="square__length" id="square_area">0</output></p>
+          <label for="rectangle_breadth">
+            Breadth of Rectangle:
+            <input type="number" id="rectangle_breadth" />
+          </label>
+          <p>
+            Area:
+            <output for="rectangle_length rectangle_breadth" id="rectangle_area">0 </output>
+          </p>
           <p>
             Perimeter:
-            <output for="square__length" id="square_perimeter">0</output>
+            <output for="rectangle_length rectangle_breadth" id="rectangle_perimeter">0 </output>
           </p>
           <details>
             <summary>Formula</summary>
-            <p>$$Area = L * L$$ $$Perimeter = 4 * L$$</p>
+            <p>$$Area = L\times B$$ $$Perimeter = 2\times (L+B)$$</p>
           </details>
-        </fieldset>
-        <!-- Area and Perimeter of Circle -->
-        <fieldset>
-          <legend>Area and Perimeter of <code>Circle</code></legend>
-          <label for="circle_radius">
-            Radius of circle:
-            <input type="number" id="circle_radius" oninput="circle(this)" />
+        </form>
+      </fieldset>
+      <!-- Area and Perimeter of Triangle -->
+      <fieldset>
+        <legend>Area and Perimeter of <code>Triangle</code></legend>
+        <form oninput="triangle(tri_A, tri_B, tri_C)">
+          <label for="tri_A">
+            A Side of Triangle:
+            <input type="number" id="tri_A" />
           </label>
-          <p>Area: <output for="circle__radius" id="circle_area">0</output></p>
-          <p>
-            Perimeter:
-            <output for="circle__radius" id="circle_perimeter">0</output>
-          </p>
+          <label for="tri_B">
+            B Side of Triangle:
+            <input type="number" id="tri_B" />
+          </label>
+          <label for="tri_C">
+            C Side of Triangle:
+            <input type="number" id="tri_C" />
+          </label>
+          <p>Area: <output for="tri_A tri_B tri_C" id="triangle_area">0</output></p>
+          <p>Perimeter: <output for="tri_A tri_B tri_C" id="triangle_perimeter">0</output></p>
           <details>
             <summary>Formula</summary>
-            <p>$$Area = {22\over7}*R*R $$ $$Perimeter = 2*{22\over7}*R$$</p>
+            <p>$$S={(A+B+C)\over2}$$ $$Area=\sqrt{S\times (S-A)\times (S-B)\times (S-C)}$$ $$Perimeter=A+B+C$$</p>
           </details>
-        </fieldset>
-        <!-- Area and Perimeter of Rectangle -->
-        <fieldset>
-          <legend>Area and Perimeter of <code>Rectangle</code></legend>
-          <form oninput="rectangle(rectangle_length, rectangle_breadth)">
-            <label for="rectangle_length">
-              Length of Rectangle:
-              <input type="number" id="rectangle_length" />
-            </label>
-            <label for="rectangle_breadth">
-              Breadth of Rectangle:
-              <input type="number" id="rectangle_breadth" />
-            </label>
-            <p>
-              Area:
-              <output for="rectangle_length rectangle_breadth" id="rectangle_area">0 </output>
-            </p>
-            <p>
-              Perimeter:
-              <output for="rectangle_length rectangle_breadth" id="rectangle_perimeter">0 </output>
-            </p>
-            <details>
-              <summary>Formula</summary>
-              <p>$$Area = L*B$$ $$Perimeter = 2*(L+B)$$</p>
-            </details>
-          </form>
-        </fieldset>
-        <!-- Area and Perimeter of Triangle -->
-        <fieldset>
-          <legend>Area and Perimeter of <code>Triangle</code></legend>
-          <form oninput="triangle(tri_A, tri_B, tri_C)">
-            <label for="tri_A">
-              A Side of Triangle:
-              <input type="number" id="tri_A" />
-            </label>
-            <label for="tri_B">
-              B Side of Triangle:
-              <input type="number" id="tri_B" />
-            </label>
-            <label for="tri_C">
-              C Side of Triangle:
-              <input type="number" id="tri_C" />
-            </label>
-            <p>Area: <output for="tri_A tri_B tri_C" id="triangle_area">0</output></p>
-            <p>Perimeter: <output for="tri_A tri_B tri_C" id="triangle_perimeter">0</output></p>
-            <details>
-              <summary>Formula</summary>
-              <p>$$S={(A+B+C)\over2}$$ $$Area=\sqrt{S*(S-A)*(S-B)*(S-C)}$$ $$Perimeter=A+B+C$$</p>
-            </details>
-          </form>
-        </fieldset>
-      </div>
-      <!-- /Areas and Perimeters -->
-    </main>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
-  </body>
+        </form>
+      </fieldset>
+    </div>
+    <!-- /Areas and Perimeters -->
+
+    <!-- Interests -->
+    <h2>Interests</h2>
+    <div class="grid grid--col-2">
+      <!-- Find Simple Interest -->
+      <fieldset>
+        <legend>Find <code>Simple</code> Interest</legend>
+        <form oninput="findSI(simple_amount, simple_time, simple_rate)">
+          <label for="simple_amount">
+            Principle Amount:
+            <input type="number" id="simple_amount" />
+          </label>
+          <label for="simple_time">
+            Time in Years:
+            <input type="number" id="simple_time" />
+          </label>
+          <label for="simple_rate">
+            Annual Rate of Interest %:
+            <input type="number" id="simple_rate" />
+          </label>
+          <p>Simple Interest: <output for="simple_amount simple_time simple_rate" id="simple_interest">0</output></p>
+          <details>
+            <summary>Formula</summary>
+            <p>$$PA = Principle Amount$$ $$SI={(PA \times Time \times Rate)\over100}$$</p>
+          </details>
+        </form>
+      </fieldset>
+      <!-- Find Compound Interest -->
+      <fieldset>
+        <legend>Find <code>Compound</code> Interest</legend>
+        <form oninput="findCI(comp_amount, comp_time, comp_rate)">
+          <label for="comp_amount">
+            Principle Amount:
+            <input type="number" id="comp_amount" />
+          </label>
+          <label for="comp_time">
+            Time in Years:
+            <input type="number" id="comp_time" />
+          </label>
+          <label for="comp_rate">
+            Annual Rate of Interest %:
+            <input type="number" id="comp_rate" />
+          </label>
+          <p>Compound Interest: <output for="comp_amount comp_time comp_rate" id="comp_interest">0</output></p>
+          <details>
+            <summary>Formula</summary>
+            <p>$$PA = Principle Amount$$ $$CI=PA\times {(1 + Rate)\over100}^{Time} - PA$$</p>
+          </details>
+        </form>
+      </fieldset>
+    </div>
+  </main>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+
 </html>
