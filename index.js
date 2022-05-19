@@ -2,18 +2,7 @@
 // the function that will do for me. It will getElementById
 // and set its innerText to value provided
 function setId(element, value) {
-  return (document.getElementById(element).innerText = `${check(value)}`);
-}
-
-// check if number inserted in input is decimal or integer
-// if integer, return the integer value,
-// else set fixed limit for decimal value.
-// e.g. 15.347394 => 15.347
-function check(element) {
-  if (Number.isInteger(element)) {
-    return element;
-  }
-  return element.toFixed(3);
+  return (document.getElementById(element).innerText = value);
 }
 
 // function: turn the input value into floating number
@@ -89,6 +78,39 @@ function triangle(a, b, c) {
   let tri_peri_operation = s * (s - float(a)) * (s - float(b)) * (s - float(c));
   let triangle_area = Math.sqrt(tri_peri_operation) || 0;
   let triangle_perimeter = sum || 0;
+  console.log(triangle_area);
   setId("triangle_area", triangle_area);
   setId("triangle_perimeter", triangle_perimeter);
+}
+
+function cosInDegree(radValue) {
+  return (radValue * 180) / Math.PI;
+}
+
+// convert default cos radian to degree
+function calculateCos(deg) {
+  var rad = (Math.PI / 180) * deg;
+  return Math.cos(rad);
+}
+
+// convert default sin radian to degree
+function calculateSin(deg) {
+  var rad = (Math.PI / 180) * deg;
+
+  return Math.sin(rad);
+}
+
+function findCart(r, angle) {
+  let x = float(r) * calculateCos(float(angle)) || 0;
+  let y = float(r) * calculateSin(float(angle)) || 0;
+  setId("cart_x_output", x);
+  setId("cart_y_output", y);
+}
+
+function findPolar(x, y) {
+  let x_and_y = Math.pow(float(x), 2) + Math.pow(float(y), 2);
+  let r = Math.sqrt(x_and_y) || 0;
+  let angle = Math.atan(float(y) / float(x)) || 0;
+  setId("polar_r_output", r);
+  setId("polar_ang_output", angle);
 }

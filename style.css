@@ -23,9 +23,11 @@ output {
 .container {
   width: min(100% - 2rem, 56.25rem);
   margin-inline: auto;
+  padding-block: 1rem 3rem;
 }
 
-:where(form, fieldset) > *:where(:not(:first-child)) {
+form > *:where(:not(:first-child)),
+fieldset > *:where(:not(:first-child)) {
   margin-top: 0.5rem;
 }
 
@@ -53,10 +55,12 @@ fieldset {
 }
 
 label {
-  display: block;
+  display: grid;
+  gap: 0.3rem;
 }
 
 input {
+  width: min(15rem, 100%);
   font-family: "Open Sans", sans-serif;
   letter-spacing: 1px;
 }

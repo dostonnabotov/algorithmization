@@ -22,46 +22,52 @@
         <fieldset>
           <legend>From <code>Celcius</code> to <code>Fahrenheit</code></legend>
           <label for="celToFah">
-            Temperature in Celcius:
+            <span>Temperature in Celcius:</span>
             <input type="number" id="celToFah" oninput="fromCelToFah(this)" />
           </label>
           <p>
-            Output: <output for="celToFah" id="result_CtoF">0</output>
-            \(^\circ F\)
+            <span>Output:</span> <span>
+              <output for="celToFah" id="result_CtoF">0</output>
+              \(^\circ F\)
+            </span>
           </p>
           <details>
             <summary>Formula</summary>
-            <p>$$T_F=({9\over 5} * T_C) + 32$$</p>
+            <p>$$T_F=({9\over 5} \times T_C) + 32$$</p>
           </details>
         </fieldset>
         <!-- from Fahrenheit to Celcius -->
         <fieldset>
           <legend>From <code>Fahrenheit</code> to <code>Celcius</code></legend>
           <label for="fahToCel">
-            Temperature in Fahrenheit:
+            <span>Temperature in Fahrenheit:</span>
             <input type="number" id="fahToCel" oninput="fromFahToCel(this)" />
           </label>
           <p>
-            Output:
-            <output for="fahToCel" id="result_FtoC">0</output>
-            \(^\circ C\)
+            <span>Output:</span>
+            <span>
+              <output for="fahToCel" id="result_FtoC">0</output>
+              \(^\circ C\)
+            </span>
           </p>
           <details>
             <summary>Formula</summary>
-            <p>$$T_C={5\over 9} * (T_F - 32)$$</p>
+            <p>$$T_C={5\over 9} \times (T_F - 32)$$</p>
           </details>
         </fieldset>
         <!-- from Celcius to Kelvin -->
         <fieldset>
           <legend>From <code>Celcius</code> to <code>Kelvin</code></legend>
           <label for="celToKel">
-            Temperature in Celcius:
+            <span>Temperature in Celcius:</span>
             <input type="number" id="celToKel" oninput="fromCelToKel(this)" />
           </label>
           <p>
-            Output:
-            <output for="celToKel" id="result_CtoK">0</output>
-            \(^\circ K\)
+            <span>Output:</span>
+            <span>
+              <output for="celToKel" id="result_CtoK">0</output>
+              \(^\circ K\)
+            </span>
           </p>
           <details>
             <summary>Formula</summary>
@@ -72,13 +78,15 @@
         <fieldset>
           <legend>From <code>Kelvin</code> to <code>Celcius</code></legend>
           <label for="kelToCel">
-            Temperature in Kelvin:
+            <span>Temperature in Kelvin:</span>
             <input type="number" id="kelToCel" oninput="fromKelToCel(this)" />
           </label>
           <p>
-            Output:
-            <output for="kelToCel" id="result_KtoC">0</output>
-            \(^\circ C\)
+            <span>Output:</span>
+            <span>
+              <output for="kelToCel" id="result_KtoC">0</output>
+              \(^\circ C\)
+            </span>
           </p>
           <details>
             <summary>Formula</summary>
@@ -89,34 +97,38 @@
         <fieldset>
           <legend>From <code>Fahrenheit</code> to <code>Kelvin</code></legend>
           <label for="fahToKel">
-            Temperature in Fahrenheit:
+            <span>Temperature in Fahrenheit:</span>
             <input type="number" id="fahToKel" oninput="fromFahToKel(this)" />
           </label>
           <p>
-            Output:
-            <output for="fahToKel" id="result_FtoK">0</output>
-            \(^\circ K\)
+            <span>Output:</span>
+            <span>
+              <output for="fahToKel" id="result_FtoK">0</output>
+              \(^\circ K\)
+            </span>
           </p>
           <details>
             <summary>Formula</summary>
-            <p>$$T_K={5\over 9} * (T_F - 32)+273.15$$</p>
+            <p>$$T_K={5\over 9} \times (T_F - 32)+273.15$$</p>
           </details>
         </fieldset>
         <!-- from Kelvin to Fahrenheit -->
         <fieldset>
           <legend>From <code>Kelvin</code> to <code>Fahrenheit</code></legend>
           <label for="kelToFah">
-            Temperature in Kelvin:
+            <span>Temperature in Kelvin:</span>
             <input type="number" id="kelToFah" oninput="fromKelToFah(this)" />
           </label>
           <p>
-            Output:
-            <output for="kelToFah" id="result_KtoF">0</output>
-            \(^\circ F\)
+            <span>Output:</span>
+            <span>
+              <output for="kelToFah" id="result_KtoF">0</output>
+              \(^\circ F\)
+            </span>
           </p>
           <details>
             <summary>Formula</summary>
-            <p>$$T_F={9\over 5} * (T_K - 273.15)+32$$</p>
+            <p>$$T_F={9\over 5} \times (T_K - 273.15)+32$$</p>
           </details>
         </fieldset>
       </div>
@@ -129,34 +141,34 @@
         <fieldset>
           <legend>Area and Perimeter of <code>Square</code></legend>
           <label for="square_length">
-            Side Length of Square:
+            <span>Side Length of Square:</span>
             <input type="number" id="square_length" oninput="square(this)" />
           </label>
-          <p>Area: <output for="square__length" id="square_area">0</output></p>
+          <p><span>Area:</span>output for="square__length" id="square_area">0</output></p>
           <p>
-            Perimeter:
+            <span>Perimeter:</span>
             <output for="square__length" id="square_perimeter">0</output>
           </p>
           <details>
             <summary>Formula</summary>
-            <p>$$Area = L * L$$ $$Perimeter = 4 * L$$</p>
+            <p>$$Area = L \times L$$ $$Perimeter = 4 \times L$$</p>
           </details>
         </fieldset>
         <!-- Area and Perimeter of Circle -->
         <fieldset>
           <legend>Area and Perimeter of <code>Circle</code></legend>
           <label for="circle_radius">
-            Radius of circle:
+            <span>Radius of circle:</span>
             <input type="number" id="circle_radius" oninput="circle(this)" />
           </label>
-          <p>Area: <output for="circle__radius" id="circle_area">0</output></p>
+          <p><span>Area: </span><output for="circle__radius" id="circle_area">0</output></p>
           <p>
-            Perimeter:
+            <span>Perimeter:</span>
             <output for="circle__radius" id="circle_perimeter">0</output>
           </p>
           <details>
             <summary>Formula</summary>
-            <p>$$Area = {22\over7}*R*R $$ $$Perimeter = 2*{22\over7}*R$$</p>
+            <p>$$Area = {22\over7}\times R\times R $$ $$Perimeter = 2\times {22\over7}\times R$$</p>
           </details>
         </fieldset>
         <!-- Area and Perimeter of Rectangle -->
@@ -164,24 +176,24 @@
           <legend>Area and Perimeter of <code>Rectangle</code></legend>
           <form oninput="rectangle(rectangle_length, rectangle_breadth)">
             <label for="rectangle_length">
-              Length of Rectangle:
+              <span>Length of Rectangle:</span>
               <input type="number" id="rectangle_length" />
             </label>
             <label for="rectangle_breadth">
-              Breadth of Rectangle:
+              <span>Breadth of Rectangle:</span>
               <input type="number" id="rectangle_breadth" />
             </label>
             <p>
-              Area:
+              <span>Area:</span>
               <output for="rectangle_length rectangle_breadth" id="rectangle_area">0 </output>
             </p>
             <p>
-              Perimeter:
+              <span>Perimeter:</span>
               <output for="rectangle_length rectangle_breadth" id="rectangle_perimeter">0 </output>
             </p>
             <details>
               <summary>Formula</summary>
-              <p>$$Area = L*B$$ $$Perimeter = 2*(L+B)$$</p>
+              <p>$$Area = L\times B$$ $$Perimeter = 2\times (L+B)$$</p>
             </details>
           </form>
         </fieldset>
@@ -190,27 +202,87 @@
           <legend>Area and Perimeter of <code>Triangle</code></legend>
           <form oninput="triangle(tri_A, tri_B, tri_C)">
             <label for="tri_A">
-              A Side of Triangle:
+              <span>A Side of Triangle:</span>
               <input type="number" id="tri_A" />
             </label>
             <label for="tri_B">
-              B Side of Triangle:
+              <span>B Side of Triangle:</span>
               <input type="number" id="tri_B" />
             </label>
             <label for="tri_C">
-              C Side of Triangle:
+              <span>C Side of Triangle:</span>
               <input type="number" id="tri_C" />
             </label>
-            <p>Area: <output for="tri_A tri_B tri_C" id="triangle_area">0</output></p>
-            <p>Perimeter: <output for="tri_A tri_B tri_C" id="triangle_perimeter">0</output></p>
+            <p><span>Area:</span> <output for="tri_A tri_B tri_C" id="triangle_area">0</output></p>
+            <p><span>Perimeter:</span> <output for="tri_A tri_B tri_C" id="triangle_perimeter">0</output></p>
             <details>
               <summary>Formula</summary>
-              <p>$$S={(A+B+C)\over2}$$ $$Area=\sqrt{S*(S-A)*(S-B)*(S-C)}$$ $$Perimeter=A+B+C$$</p>
+              <p>
+                $$S={(A+B+C)\over2}$$ $$Area=\sqrt{S\times (S-A)\times (S-B)\times (S-C)}$$
+                $$Perimeter=A+B+C$$
+              </p>
             </details>
           </form>
         </fieldset>
       </div>
       <!-- /Areas and Perimeters -->
+
+      <!-- Polar and Cartesian Coordinates -->
+      <h2>Polar and Cartesian Coordinates</h2>
+      <div class="grid grid--col-2">
+        <!-- From Polar to Cartesian -->
+        <fieldset>
+          <legend>Convert from <code>Polar</code> to <code>Cartesian</code></legend>
+          <form oninput="findCart(polar_length, polar_angle)">
+            <label for="polar_length">
+              <span>Length \(r\):</span>
+              <input type="number" id="polar_length" />
+            </label>
+            <label for="polar_angle">
+              <span>Angle \(\theta\):</span>
+              <input type="number" id="polar_angle" />
+            </label>
+            <p>
+              <span>\(X\) coordinate:</span>
+              <output for="polar_length polar_angle" id="cart_x_output">0 </output>
+            </p>
+            <p>
+              <span>\(Y\) coordinate:</span>
+              <output for="polar_length polar_angle" id="cart_y_output">0 </output>
+            </p>
+            <details>
+              <summary>Formula</summary>
+              <p>$$X = r\times cos(\theta)$$ $$Y = r\times sin(\theta)$$</p>
+            </details>
+          </form>
+        </fieldset>
+        <!-- From Cartesian to Polar -->
+        <fieldset>
+          <legend>Convert from <code>Cartesian</code> to <code>Polar</code></legend>
+          <form oninput="findPolar(cart_x, cart_y)">
+            <label for="cart_x">
+              <span>\(X\) coordinate:</span>
+              <input type="number" id="cart_x" />
+            </label>
+            <label for="cart_y">
+              <span>\(Y\) coordinate:</span>
+              <input type="number" id="cart_y" />
+            </label>
+            <p>
+              <span>Length \(r\):</span>
+              <output for="cart_x cart_y" id="polar_r_output">0 </output>
+            </p>
+            <p>
+              <span>Angle \(\theta\): </span>
+              <output for="cart_x cart_y" id="polar_ang_output">0 </output>
+            </p>
+            <details>
+              <summary>Formula</summary>
+              <p>$$r = {\sqrt{X^2+Y^2}}$$ $$\theta = tan^{-1}({y\over x})$$</p>
+            </details>
+          </form>
+        </fieldset>
+      </div>
     </main>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script
