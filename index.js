@@ -114,3 +114,14 @@ function findPolar(x, y) {
   setId("polar_r_output", r);
   setId("polar_ang_output", angle);
 }
+
+function findSI(amount, time, rate) {
+  let si_operation = (float(amount) * float(time) * float(rate)) / 100 || 0;
+  setId("simple_interest", si_operation);
+}
+
+function findCI(amount, time, rate) {
+  let ci_fraction = (1 + float(rate)) / 100;
+  let ci_operation = float(amount) * Math.pow(ci_fraction, float(time)) - float(amount) || 0;
+  setId("comp_interest", ci_operation);
+}

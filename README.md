@@ -1,1 +1,1 @@
-# algortihmization
+# algorithmization
