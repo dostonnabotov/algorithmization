@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Algorithmization</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script defer src="index.js"></script>
   </head>
 
@@ -22,7 +22,8 @@
             <input type="number" id="celToFah" oninput="fromCelToFah(this)" />
           </label>
           <p>
-            <span>Output:</span> <span>
+            <span>Output:</span>
+            <span>
               <output for="celToFah" id="result_CtoF">0</output>
               \(^\circ F\)
             </span>
@@ -140,7 +141,7 @@
             <span>Side Length of Square:</span>
             <input type="number" id="square_length" oninput="square(this)" />
           </label>
-          <p><span>Area:</span>output for="square__length" id="square_area">0</output></p>
+          <p><span>Area:</span><output for="square__length" id="square_area">0</output></p>
           <p>
             <span>Perimeter:</span>
             <output for="square__length" id="square_perimeter">0</output>
@@ -210,7 +211,10 @@
               <input type="number" id="tri_C" />
             </label>
             <p><span>Area:</span> <output for="tri_A tri_B tri_C" id="triangle_area">0</output></p>
-            <p><span>Perimeter:</span> <output for="tri_A tri_B tri_C" id="triangle_perimeter">0</output></p>
+            <p>
+              <span>Perimeter:</span>
+              <output for="tri_A tri_B tri_C" id="triangle_perimeter">0</output>
+            </p>
             <details>
               <summary>Formula</summary>
               <p>
@@ -281,55 +285,61 @@
       </div>
 
       <!-- Interests -->
-    <h2>Interests</h2>
-    <div class="grid grid--col-2">
-      <!-- Find Simple Interest -->
-      <fieldset>
-        <legend>Find <code>Simple</code> Interest</legend>
-        <form oninput="findSI(simple_amount, simple_time, simple_rate)">
-          <label for="simple_amount">
-            <span>Principle Amount:</span>
-            <input type="number" id="simple_amount" />
-          </label>
-          <label for="simple_time">
-            <span>Time in Years:</span>
-            <input type="number" id="simple_time" />
-          </label>
-          <label for="simple_rate">
-            <span>Annual Rate of Interest %:</span>
-            <input type="number" id="simple_rate" />
-          </label>
-          <p><span>Simple Interest:</span> <output for="simple_amount simple_time simple_rate" id="simple_interest">0</output></p>
-          <details>
-            <summary>Formula</summary>
-            <p>$$PA = Principle Amount$$ $$SI={(PA \times Time \times Rate)\over100}$$</p>
-          </details>
-        </form>
-      </fieldset>
-      <!-- Find Compound Interest -->
-      <fieldset>
-        <legend>Find <code>Compound</code> Interest</legend>
-        <form oninput="findCI(comp_amount, comp_time, comp_rate)">
-          <label for="comp_amount">
-            <span>Principle Amount:</span>
-            <input type="number" id="comp_amount" />
-          </label>
-          <label for="comp_time">
-            <span>Time in Years:</span>
-            <input type="number" id="comp_time" />
-          </label>
-          <label for="comp_rate">
-            <span>Annual Rate of Interest %:</span>
-            <input type="number" id="comp_rate" />
-          </label>
-          <p><span>Compound Interest:</span> <output for="comp_amount comp_time comp_rate" id="comp_interest">0</output></p>
-          <details>
-            <summary>Formula</summary>
-            <p>$$PA = Principle Amount$$ $$CI=PA\times {(1 + Rate)\over100}^{Time} - PA$$</p>
-          </details>
-        </form>
-      </fieldset>
-    </div>
+      <h2>Interests</h2>
+      <div class="grid grid--col-2">
+        <!-- Find Simple Interest -->
+        <fieldset>
+          <legend>Find <code>Simple</code> Interest</legend>
+          <form oninput="findSI(simple_amount, simple_time, simple_rate)">
+            <label for="simple_amount">
+              <span>Principle Amount:</span>
+              <input type="number" id="simple_amount" />
+            </label>
+            <label for="simple_time">
+              <span>Time in Years:</span>
+              <input type="number" id="simple_time" />
+            </label>
+            <label for="simple_rate">
+              <span>Annual Rate of Interest %:</span>
+              <input type="number" id="simple_rate" />
+            </label>
+            <p>
+              <span>Simple Interest:</span>
+              <output for="simple_amount simple_time simple_rate" id="simple_interest">0</output>
+            </p>
+            <details>
+              <summary>Formula</summary>
+              <p>$$PA = Principle Amount$$ $$SI={(PA \times Time \times Rate)\over100}$$</p>
+            </details>
+          </form>
+        </fieldset>
+        <!-- Find Compound Interest -->
+        <fieldset>
+          <legend>Find <code>Compound</code> Interest</legend>
+          <form oninput="findCI(comp_amount, comp_time, comp_rate)">
+            <label for="comp_amount">
+              <span>Principle Amount:</span>
+              <input type="number" id="comp_amount" />
+            </label>
+            <label for="comp_time">
+              <span>Time in Years:</span>
+              <input type="number" id="comp_time" />
+            </label>
+            <label for="comp_rate">
+              <span>Annual Rate of Interest %:</span>
+              <input type="number" id="comp_rate" />
+            </label>
+            <p>
+              <span>Compound Interest:</span>
+              <output for="comp_amount comp_time comp_rate" id="comp_interest">0</output>
+            </p>
+            <details>
+              <summary>Formula</summary>
+              <p>$$PA = Principle Amount$$ $$CI=PA\times {(1 + Rate)\over100}^{Time} - PA$$</p>
+            </details>
+          </form>
+        </fieldset>
+      </div>
     </main>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script
